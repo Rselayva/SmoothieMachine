@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smoothie Order Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Order Your Smoothie</h1>
+    <form id="smoothie-form">
+      <!-- Customer Name -->
+      <label for="customer-name">Name:</label>
+      <input type="text" id="customer-name" name="customerName" placeholder="Your Name" required>
+      
+      <!-- Smoothie Size -->
+      <label for="smoothie-size">Size:</label>
+      <select id="smoothie-size" name="smoothieSize" required>
+        <option value="" disabled selected>Select size</option>
+        <option value="Small">Small</option>
+        <option value="Medium">Medium</option>
+        <option value="Large">Large</option>
+      </select>
+      
+      <!-- Fruit Choices -->
+      <label>Fruits:</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="fruits" value="Strawberry"> Strawberry</label>
+        <label><input type="checkbox" name="fruits" value="Banana"> Banana</label>
+        <label><input type="checkbox" name="fruits" value="Mango"> Mango</label>
+        <label><input type="checkbox" name="fruits" value="Blueberry"> Blueberry</label>
+      </div>
+      
+      <!-- Add-ons -->
+      <label>Add-ons:</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="addons" value="Protein Powder"> Protein Powder</label>
+        <label><input type="checkbox" name="addons" value="Chia Seeds"> Chia Seeds</label>
+        <label><input type="checkbox" name="addons" value="Whipped Cream"> Whipped Cream</label>
+      </div>
+      
+      <!-- Special Instructions -->
+      <label for="special-instructions">Special Instructions:</label>
+      <textarea id="special-instructions" name="instructions" placeholder="Any special requests?"></textarea>
+      
+      <!-- Order Button -->
+      <button type="button" id="order-button">Order Smoothie</button>
+    </form>
+    <div id="order-summary"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
